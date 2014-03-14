@@ -1,5 +1,5 @@
 ---
-name: cloud_controller_ng
+name: cloud_controller_ng/worker
 templates:
   cloud_controller_ng.yml.erb: config/cloud_controller_ng.yml
   cloud_controller_jobs_ctl.erb: bin/cloud_controller_jobs_ctl
@@ -382,9 +382,6 @@ properties:
     default: "off"
     description: "NewRelic's SQL statement recording mode: [off | obfuscated | raw]"
 
-  ccng.process_group:
-    default: cloud_controller
-    description: "Determines what processes to run for the job"
   ccng.jobs.local.number_of_workers:
     default: 2
     description: "Number of local cloud_controller_jobs workers"
